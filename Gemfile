@@ -43,7 +43,7 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg'
+  gem 'pg', '~> 0.11'
 end
 
 group :development do
