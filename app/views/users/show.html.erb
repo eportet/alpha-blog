@@ -9,4 +9,6 @@
 	<h4 align="center"><%= @user.username %>'s Articles:</h4>
 	<%= render 'articles/article', obj: @user.articles %>
 
+	<%= render 'shared/pagination', obj: @user_articles %>
+
 </div>

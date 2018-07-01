@@ -11,7 +11,7 @@
 
   <body>
     <%= render 'layouts/navbar' %>
-    <%= render 'layouts/messages' %>
+    <%= render 'layouts/messages' if !current_page?(root_path)%>
     <%= yield %>
   </body>
 </html>
