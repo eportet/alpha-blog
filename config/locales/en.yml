@@ -32,7 +32,6 @@
 en:
   helpers:
     submit:
-      article:
         create: "Create"
         update: "Update"
 
