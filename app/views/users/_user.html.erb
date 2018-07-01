@@ -1,0 +1,21 @@
+<% obj.each do |user| %>
+	<div class="row">
+		<div class="well col-xs-8 col-xs-offset-2">
+			<div class="container-user">
+				<% if user %>
+				<div class="container-user-img">
+					<%= link_to gravatar_for(user), user_path(user) %>
+				</div>
+				<div class="container-user-body">
+					<div class="container-user-body-username">
+						<%= link_to user.username, user_path(user) %>
+					</div>
+					<div class="ontainer-user-body-details">
+						<small><%= pluralize(user.articles.count, "article") if user.articles %></small>
+					</div>
+				</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+<% end %>

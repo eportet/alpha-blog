@@ -32,22 +32,43 @@ body {
 	width: 50px;
 }
 
-.well-container {
+.container-article {
 	display: flex;
 	align-items: stretch;
 	justify-content: space-between;
 }
 
-.well-container-article {
+.container-article-body {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
 
+	max-width: 400px;
 }
 
-.well-container-btns {
+.container-article-btns {
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
 }
 
-.well-container-article-body {}
+.container-user {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
 
-.well-container-article-details {}
+.container-user-body {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+
+	height: 80px;
+	padding-left: 20px;
+}
+
+.container-user-body-username {
+	font-size: x-large;
+}
+
