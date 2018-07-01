@@ -36,13 +36,22 @@ body {
 	width: 50px;
 }
 
-.all-title {
-	display: inline-block;
-	/*text-align: left;*/
+.well-container {
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
 }
 
-.all-action-btns {
-	display: inline-block;
-	float:  right;
+.well-container-article {
+
 }
 
+.well-container-btns {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.well-container-article-body {}
+
+.well-container-article-details {}
