@@ -12,6 +12,13 @@
 						<div class="container-article-body-details">
 							<small> Author: <%= article.user.username if article.user %> | Created: <%= time_ago_in_words(article.created_at).gsub('about','') %> ago | Updated: <%= time_ago_in_words(article.updated_at).gsub('about','') %> ago </small>
 						</div>
+						<% if article.categories.any? %>
+							<div class="container-article-body-categories">
+								<small>
+									Categories: <%= render article.categories %>
+								</small>
+							</div>
+						<% end %>
 					</div>
 					<% if logged_in? && (current_user == article.user || current_user.admin?) %>
 						<div class="container-article-btns">

@@ -6,6 +6,10 @@
 		<h4><strong>Description:</strong></h4>
 		<%= simple_format(@article.description) %>
 		<hr>
+		<% if @article.categories.any? %>
+			<p>Categories: <%= render @article.categories %></p>
+		<% end %>
+		<hr>
 		<div class="article-actions">
 			<%= link_to "All", articles_path, class: "btn btn-xs btn-success" %>
 			<% if logged_in? && (current_user == @article.user || current_user.admin?) %>

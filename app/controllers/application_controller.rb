@@ -24,8 +24,8 @@ class ApplicationController < ActionController::Base
 	end
 
 	def require_admin
-		if logged_in? && !current_user.admin?
-			flash[:warning] = "Requires admin privilege"
+		if !logged_in? || (logged_in? && !current_user.admin?)
+			flash[:warning] = "Requires Admin Privileges"
 			redirect_back(fallback_location: root_path)
 		end
 	end

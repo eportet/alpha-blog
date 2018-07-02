@@ -84,3 +84,29 @@ body {
 	height: 80px;
 }
 
+.container-category {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.container-category-name {
+	text-align: center;
+	font-size: large;
+}
+
+.input-checkbox input {
+	width: auto !important;
+}
+
+.badge {
+	background-color: #CEF6F5;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: x-small;
+}
+
+.category-edit {
+	padding-bottom: 15px;
+}
+

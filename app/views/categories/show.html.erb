@@ -1,0 +1,10 @@
+<div class="container">
+	<h1 align="center"><%= @category.name + " Category" %></h1>
+	<% if logged_in? && current_user.admin? %>
+	<div align="center" class="category-edit">
+		<%= link_to "Edit Name", edit_category_path(@category), class: "btn btn-primary center" %>
+	</div>
+	<% end %>
+	<%= render 'articles/article', obj: @category.articles %>
+	<%= render 'shared/pagination', obj: @category_articles %>
+</div>
