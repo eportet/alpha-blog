@@ -72,3 +72,15 @@ body {
 	font-size: x-large;
 }
 
+.container-user-btns {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+
+	margin-left: auto;
+	margin-right: 5%;
+
+	height: 80px;
+}
+

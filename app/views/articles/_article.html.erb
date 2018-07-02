@@ -13,7 +13,7 @@
 							<small> Author: <%= article.user.username if article.user %> | Created: <%= time_ago_in_words(article.created_at).gsub('about','') %> ago | Updated: <%= time_ago_in_words(article.updated_at).gsub('about','') %> ago </small>
 						</div>
 					</div>
-					<% if logged_in? && current_user == article.user %>
+					<% if logged_in? && (current_user == article.user || current_user.admin?) %>
 						<div class="container-article-btns">
 							<%= link_to "Edit", edit_article_path(article), class: "btn btn-xs btn-primary" %>
 							&nbsp;

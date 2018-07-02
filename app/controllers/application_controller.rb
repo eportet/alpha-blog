@@ -17,8 +17,15 @@ class ApplicationController < ActionController::Base
 	end
 
 	def require_same_user(user)
-		if current_user != user
+		if current_user != user && !current_user.admin?
 			flash[:danger] = "You can't do that"
+			redirect_back(fallback_location: root_path)
+		end
+	end
+
+	def require_admin
+		if logged_in? && !current_user.admin?
+			flash[:warning] = "Requires admin privilege"
 			redirect_back(fallback_location: root_path)
 		end
 	end
